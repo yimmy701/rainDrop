@@ -63,20 +63,13 @@ class RainDrop {
     this.y = 0;
     this.d = random(10, 20);
     this.fallSpeed = random(5, 15);
-    // this.x2 = this.x
-    // this.y2 = this.y - this.d / sqrt(6) - this.d/2;
-    // this.x1 = this.x - this.d / (2 * sqrt(2));
-    // this.y1 = this.y - this.d / (2 * sqrt(2));
-    // this.x3 = this.x + this.d / (2 * sqrt(2));
-    // this.y3 = this.y - this.d / (2 * sqrt(2));
   }
 
   show() {
     noStroke();
     fill(60, 80, 80);
     ellipse(this.x, this.y, this.d);
-    //triangle(this.x-(this.d/2),this.y, this.x,this.y-this.d, this.x+(this.d/2),this.y);
-    //triangle(this.x1, this.y1, this.x2, this.y2, this.x3, this.y3);
+    
     triangle(
       this.x - this.d / (2 * sqrt(2)),
       this.y - this.d / (2 * sqrt(2)),
@@ -114,23 +107,3 @@ class RainDrop {
     }
 }
 
-// function grow(){
-//   if (this.y > height * 0.8 ){
-//     a += 10;
-//     b += 20;
-//   }
-// }
-// class Grass{
-//   constructor(){
-//     this.posX = random(width * 0.05, width * 0.85);
-//     this.posY = height * 0.8;
-//     this.size (50, 60);
-//   }
-  
-//   grow() {
-//     if (this.y >= height * 0.8) {
-//     this.posX += 10;
-//     this.posY += 20;
-//   }
-//  }
-// }
